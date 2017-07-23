@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/skin">
+        <file alias="BB">skin/BB.qss</file>
+        <file alias="BW">skin/BW.qss</file>
+    </qresource>
+</RCC>
