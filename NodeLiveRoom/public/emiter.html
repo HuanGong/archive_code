@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>live show</title>
+    <script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.js"></script>
+    <script type=text/javascript src="http://cdn.bootcss.com/socket.io/1.4.6/socket.io.js"></script>
+</head>
+<body>
+   <h1>video stream capture</h1> 
+
+   <video src="" id="video" style="width: 320px;height: 240px;" autoplay="true"></video>
+   <canvas id="preview" width="320" height="240"></canvas>
+   <div id="logger"></div>
+
+   <script type="text/javascript">
+    var canvas = document.getElementById('preview');
+    var context = canvas.getContext("2d");
+
+    canvas.width = 320;
+    canvas.height= 240;
+
+    context.width = canvas.width;
+    context.height = canvas.height;
+
+    var video  = document.getElementById('video');
+    var socket = io();
+
+    function logger(msg) {
+        $("#logger").text(msg);
+    }
+
+    function loadCam(stream) {
+        video.src = window.URL.createObjectURL(stream);
+        
+        logger("camera connect [ok]") 
+    }
+    function loadCamFail(stream) {
+       logger("camera connect [failed]") 
+    }
+
+    function viewVideo(video, context) {
+        context.drawImage(video, 0, 0, context.width, context.height);
+        socket.emit('stream', canvas.toDataURL('image/webp'));
+    }
+
+    $(function() {
+        console.log('test function')
+    });
+
+    $(function(){
+        navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia ||
+        navagator.mozGetUserMedia || navigator.msgGetUserMedia);
+
+        if (navigator.getUserMedia) {
+            navigator.getUserMedia({video: true}, loadCam, loadCamFail);
+        }
+        setInterval(function(){
+            viewVideo(video, context);
+        },200)
+    });
+
+
+   </script>
+
+</body>
+</html>

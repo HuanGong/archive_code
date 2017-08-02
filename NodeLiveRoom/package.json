@@ -1,0 +1,12 @@
+{
+    "name": "liveRoom",
+    "version": "0.0.1",
+    "description": "a live root chat and fun",
+    "dependencies": {
+        "socket.io": "*",
+        "express" : "*",
+        "log" : "*"
+
+    }
+
+}
