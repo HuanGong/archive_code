@@ -11,16 +11,22 @@
     <div class="floating-header-title">{{title}}</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this {{> "icons/point"}}</div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-            onclick="window.open(this.href, 'share-github', 'width=550,height=235');return false;">
-            {{> "icons/github"}}
+
+        <a class="floating-header-share-wb" href="//service.weibo.com/share/share.php?url={{url absolute="true"}}&title={{encode title}}&pic={{image_url absolute="true"}}&searchPic=true" 
+            onclick="console.log(this.href), window.open(this.href, 'weibo-share', 'width=550,height=235');return false;">
+            {{> "icons/weibo_color"}}
+        </a>
+        <a class="floating-header-share-wx" href="javascript:;">
+            <div class="popover-wrapper share-qrcode">
+                <img src="http://qr.liantu.com/api.php?text={{url absolute="true"}}&el=l&w=300&m=0">
+            </div>
         </a>
         <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            onclick="console.log(this.href), window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             {{> "icons/twitter"}}
         </a>
         <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            onclick="window.open(console.log(this.href), this.href, 'share-facebook','width=580,height=296');return false;">
             {{> "icons/facebook"}}
         </a>
     </div>
