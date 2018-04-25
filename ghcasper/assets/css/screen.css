@@ -1479,6 +1479,10 @@ Usage (In Ghost editor):
   
 .popover .popover-wrapper {
    display: none;
+   height: 150px;
+   position: fixed;
+   top: 60px;
+   right: 10px;
 }
   
 .popover:hover .popover-wrapper,
@@ -1519,7 +1523,7 @@ Usage (In Ghost editor):
   z-index: 9;
 }
 
-.floating-header-share-wx
+.floating-header-share-wx,
 .floating-header-share-wb,
 .floating-header-share-tw,
 .floating-header-share-fb {
@@ -1535,6 +1539,7 @@ Usage (In Ghost editor):
 .floating-header-share-wb {
     background: #3eb0efa8;
 }
+.floating-header-share-wx,
 .floating-header-share-tw {
     background: #33b1ff;
 }
@@ -1595,6 +1600,7 @@ Usage (In Ghost editor):
         font-size: 1.5rem;
     }
 
+    .floating-header-share-wx,
     .floating-header-share-wb,
     .floating-header-share-tw,
     .floating-header-share-fb {

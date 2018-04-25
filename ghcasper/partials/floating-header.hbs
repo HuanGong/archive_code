@@ -20,12 +20,13 @@
             <div class="popover-wrapper share-qrcode">
                 <img src="http://qr.liantu.com/api.php?text={{url absolute="true"}}&el=l&w=300&m=0">
             </div>
+            {{> "icons/twitter"}}
         </a>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+        <a class="floating-header-share-tw" href="//twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
             onclick="console.log(this.href), window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             {{> "icons/twitter"}}
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+        <a class="floating-header-share-fb" href="//www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
             onclick="window.open(console.log(this.href), this.href, 'share-facebook','width=580,height=296');return false;">
             {{> "icons/facebook"}}
         </a>
