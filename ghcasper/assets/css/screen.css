@@ -1523,6 +1523,7 @@ Usage (In Ghost editor):
   z-index: 9;
 }
 
+.floating-header-share-qq,
 .floating-header-share-wx,
 .floating-header-share-wb,
 .floating-header-share-tw,
@@ -1539,6 +1540,7 @@ Usage (In Ghost editor):
 .floating-header-share-wb {
     background: #3eb0efa8;
 }
+.floating-header-share-qq,
 .floating-header-share-wx,
 .floating-header-share-tw {
     background: #33b1ff;
