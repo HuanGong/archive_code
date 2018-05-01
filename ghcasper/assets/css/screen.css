@@ -305,6 +305,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .social-link svg {
     height: 1.8rem;
+    width: 1.8rem;
     fill: #fff;
 }
 
@@ -1537,9 +1538,7 @@ Usage (In Ghost editor):
     text-align: center;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1);
 }
-.floating-header-share-wb {
-    background: #3eb0efa8;
-}
+.floating-header-share-wb,
 .floating-header-share-qq,
 .floating-header-share-wx,
 .floating-header-share-tw {
@@ -1601,7 +1600,7 @@ Usage (In Ghost editor):
     .floating-header-logo {
         font-size: 1.5rem;
     }
-
+    .floating-header-share-qq,
     .floating-header-share-wx,
     .floating-header-share-wb,
     .floating-header-share-tw,
