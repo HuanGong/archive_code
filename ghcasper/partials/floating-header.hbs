@@ -11,7 +11,7 @@
     <div class="floating-header-title">{{title}}</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this {{> "icons/point"}}</div>
-        <a class="floating-header-share-qq" href="//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary={{encode title}}&url={{url absolute="true"}}&pics={{image_url absolute="true"}}"
+                <a class="floating-header-share-qq" href="//sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary={{encode title}}&url={{url absolute="true"}}&pics={{image_url absolute="true"}}"
             onclick="=window.open(this.href, 'qzone-share', 'width=550,height=235');return false;">
             {{> "icons/qzone"}}
         </a>
@@ -25,12 +25,12 @@
             </div-->
             {{> "icons/weixin"}}
         </a>
-        <a class="floating-header-share-tw" href="//twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-            onclick="console.log(this.href), window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             {{> "icons/twitter"}}
         </a>
-        <a class="floating-header-share-fb" href="//www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-            onclick="window.open(console.log(this.href), this.href, 'share-facebook','width=580,height=296');return false;">
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             {{> "icons/facebook"}}
         </a>
     </div>

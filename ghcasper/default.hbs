@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{lang}}">
 <head>
 
     {{!-- Document Settings --}}
@@ -33,7 +33,11 @@
                     <!-- Place this tag where you want the button to render. -->
                     <a class="github-button" href="https://github.com/HuanGong" aria-label="Follow @HuanGong on GitHub">Follow @HuanGong</a>
                     <a class="github-button" href="https://github.com/HuanGong/LightingIO" data-icon="octicon-star" aria-label="Star HuanGong/LightingIO on GitHub">Star</a>
+
                     <a href="{{@blog.url}}">Latest Posts</a>
+                    {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
+                    {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+                    {{!-- <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> --}}
                 </nav>
             </div>
         </footer>
@@ -65,6 +69,9 @@
 
     {{#if pagination.pages}}
     <script>
+        // maxPages is a global variable that is needed to determine
+        // if we need to load more pages for the infinitescroll, or if
+        // we reached the last page already.
         var maxPages = parseInt('{{pagination.pages}}');
     </script>
     <script src="{{asset "js/infinitescroll.js"}}"></script>
@@ -75,7 +82,7 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
-
+    
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
@@ -89,6 +96,6 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-
+    
 </body>
 </html>
